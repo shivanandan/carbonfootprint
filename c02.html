@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Carbon footprint calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Carbon footprint calculator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+			
+            <!-- form -->
+            <div id="form" class="mdl-grid portfolio-max-width portfolio-contact">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <img style="width:20%" class="article-image" src=" http://www.ngopulse.org/sites/default/files/greenpeace.jpg" border="0" alt="">
+                    </div>
+                    
+                   
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                            Carbon in the earth's atmosphere is leading to climate destabilization and we are reaching a tipping point that calls for urgent action!
+                        </p>
+                        <p>
+                            “You will die but the carbon will not; its career does not end with you. It will return to the soil, and there a plant may take it up again in time, sending it once more on a cycle of plant and animal life”. -Jacob Bronowski
+                        </p>
+				                           <form id= "form" action="#" class="">
+				                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				                                   <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+				                                   <label class="mdl-textfield__label" for="Name">Name...</label>
+				                                   <span class="mdl-textfield__error">Letters and spaces only</span>
+				                               </div>
+				                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				                                   <input class="mdl-textfield__input" type="text" id="Email">
+				                                   <label class="mdl-textfield__label" for="Email">Email...</label>
+				                               </div>
+				                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				                                   <input class="mdl-textfield__input"  type="number" id="electric" pattern="-?[0-9]*(\.[0-9]+)?">
+				                                   <label class="mdl-textfield__label" for="Name">Monthly electric bill</label>
+				                                   <span class="mdl-textfield__error">If left blank, will default to 0.</span>
+				                               </div>
+				                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				                                   <input class="mdl-textfield__input"  type="number" id="gas" pattern="-?[0-9]*(\.[0-9]+)?">
+				                                   <label class="mdl-textfield__label" for="Name">Monthly gas bill</label>
+				                                   <span class="mdl-textfield__error">If left blank, will default to 0.</span>
+				                               </div>
+				                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				                                   <input class="mdl-textfield__input"  type="number" id="oil" pattern="-?[0-9]*(\.[0-9]+)?">
+				                                   <label class="mdl-textfield__label" for="Name">Monthly oil bill</label>
+				                                   <span class="mdl-textfield__error">If left blank, will default to 0.</span>
+				                               </div>
+				                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				                                   <input class="mdl-textfield__input"  type="number" min="0" id="car" pattern="-?[0-9]*(\.[0-9]+)?">
+				                                   <label class="mdl-textfield__label" for="Name">Annual miles driven on your car</label>
+				                                   <span class="mdl-textfield__error">If left blank, will default to 0.</span>
+				                               </div>
+				                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				                                   <input class="mdl-textfield__input"  type="number" min="0" id="flights-4-less" pattern="-?[0-9]*(\.[0-9]+)?">
+				                                   <label class="mdl-textfield__label" for="Name">Number of flights taken in the past year (4 hours or less)</label>
+				                                   <span class="mdl-textfield__error">If left blank, will default to 0.</span>
+				                               </div>
+				                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				                                   <input class="mdl-textfield__input"  type="number" min="0" id="flights-4-more" pattern="-?[0-9]*(\.[0-9]+)?">
+				                                   <label class="mdl-textfield__label" for="Name">Number of flights taken in the past year (4 hours or more)</label>
+				                                   <span class="mdl-textfield__error">If left blank, will default to 0.</span>
+				                               </div>
+							
+				   							<fieldset>
+				   							<legend><b>Do you recycle newspaper?</b></legend>
+				   							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadio1">
+				   	 <input checked class="mdl-radio__button" id="optionsRadio1" name="newspaperOptionsRadios" type="radio" value="on">
+				   							  <span class="mdl-radio__label">Yes</span>
+				   							</label>
+				   							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadio2">
+				   							<input class="mdl-radio__button" id="optionsRadio2" name="newspaperOptionsRadios" type="radio" value="off">
+				   							  <span class="mdl-radio__label">No</span>
+				   							</label>
+				   						</fieldset>
+						
+						
+				   							<fieldset>
+				   								<legend><b>Do you recycle aluminum and tin?</b></legend>
+				   							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadio3">
+				   							  <input checked class="mdl-radio__button" id="optionsRadio3" name="alumtinOptionsRadios" type="radio"
+				   							   value="on">
+				   							  <span class="mdl-radio__label">Yes</span>
+				   							</label>
+				   							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadio4">
+				   							  <input class="mdl-radio__button" id="optionsRadio4" name="alumtinOptionsRadios" type="radio" value="off">
+				   							  <span class="mdl-radio__label">No</span>
+				   							</label>
+				   						</fieldset>
+						
+						
+								
+                            
+				                               <p>
+				                             <button id="calculate-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Submit
+				                                   </button>
+								
+				                               </p>
+				   						</form>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- form -->
+        
+		<!--  cards start -->
+           <div id="results" class="mdl-grid portfolio-max-width">
+               <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
+                   <div class="mdl-card__title">
+                       <h2 class="mdl-card__title-text">Your Score</h2>
+                   </div>
+                   <div class="mdl-card__supporting-text">
+				    <h3 id="score"></h3>
+					This number represents the amount of greenhouse gases in units of carbon dioxide you emit per year
+                   </div>
+				   <p id ="wastescore"> </p>
+				   <p id ="energyscore"> </p>
+				   <p id ="travelscore"> </p>
+                   <div class="mdl-card__actions mdl-card--border">
+                       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                   </div>
+               </div>
+			   
+               <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
+                   <div class="mdl-card__title">
+                       <h2 class="mdl-card__title-text">Overall contribution</h2>
+                   </div>
+                   <div class="mdl-card__supporting-text">
+					<canvas id="myChart"></canvas>
+                   </div>
+                   
+               </div>
+			   
+			   
+               <div class="mdl-cell mdl-card mdl-cell--6-col mdl-shadow--4dp portfolio-card">                
+                  <div class="mdl-card__title">
+                       <h2 class="mdl-card__title-text">Compare</h2>
+                   </div>
+                   <div class="mdl-card__supporting-text">
+					
+					
+					<ul class="demo-list-two mdl-list">
+					  <li class="mdl-list__item mdl-list__item--two-line">
+					    <span class="mdl-list__item-primary-content">
+					      <i class="material-icons mdl-list__item-avatar">&#xE815;</i>
+					      <span>6000 or below</span>
+					      <span class="mdl-list__item-sub-title">Excellent</span>
+					    </span>
+					    <span class="mdl-list__item-secondary-content">
+					      <span class="mdl-list__item-secondary-info">Your Score</span>
+					      <span id="excellent"></span> 
+					    </span>
+					  </li>
+					  <li class="mdl-list__item mdl-list__item--two-line">
+					    <span class="mdl-list__item-primary-content">
+					      <i class="material-icons mdl-list__item-avatar">&#xE813;</i>
+					      <span>6000 - 15999</span>
+					      <span class="mdl-list__item-sub-title">Good</span>
+					    </span>
+					    <span class="mdl-list__item-secondary-content">
+					      <span id="good"></span> 
+					    </span>
+					  </li>
+					  <li class="mdl-list__item mdl-list__item--two-line">
+					    <span class="mdl-list__item-primary-content">
+					      <i class="material-icons mdl-list__item-avatar">&#xE812;</i>
+					      <span>16000 - 22000</span>
+					      <span class="mdl-list__item-sub-title">Average</span>
+					    </span>
+					    <span class="mdl-list__item-secondary-content">
+					      <span id="average"></span> 
+					    </span>
+					  </li>
+					  <li class="mdl-list__item mdl-list__item--two-line">
+					    <span class="mdl-list__item-primary-content">
+					      <i class="material-icons mdl-list__item-avatar">&#xE814;</i>
+					      <span>22000 or above</span>
+					      <span class="mdl-list__item-sub-title">Bad</span>
+					    </span>
+					    <span class="mdl-list__item-secondary-content">
+					      <span id="bad"></span> 
+					    </span>
+					  </li>
+					</ul>
+                   </div>
+                   <div class="mdl-card__actions mdl-card--border">
+                       <a id="campaign1" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                   </div>
+               </div>
+			   
+               <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
+                   <div class="mdl-card__title">
+                       <h2 class="mdl-card__title-text">Individual contribution</h2>
+                   </div>
+                   
+                   <div class="mdl-card__supporting-text">
+					<canvas id="myChartbrief"></canvas>
+                   </div>
+                   
+               </div>
+			   
+           </div>
+		<!--  cards end -->
+           
+        </main>
+    </div>
+   <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" /></script>
+
+<script>
+	
+	
+	$(document).ready(function() {
+		// hide results template and error alerts on initial page load
+		$("#results").hide();
+		// prevent ability to type negative numbers or spaces in input fields
+		$("[type='number']").bind("keydown", function(e) {
+			var code = e.keyCode || e.which;
+
+			if (code == 189 || code == 173 || code == 32 || code == 69 || code == 109) {
+				return false;
+			}
+		});	
+	});
+	
+	$("#calculate-btn").on("click", function() {
+		calculateAndDisplayScore();
+		
+	});
+	
+	$("#recalculate-btn").on("click", function() {
+		location.reload();
+		window.scrollTo(0, 0);
+	});
+	
+	$( "#form" ).submit(function( event ) {
+	 // alert( "Handler for .submit() called." );
+	  event.preventDefault();
+	});
+	
+	var calculateAndDisplayScore = function() {
+		//window.scrollTo(0, 400);
+		// hide form template if all inputs are completed
+		$("#form").hide();
+
+		// get input values
+		var electricInput = document.getElementById("electric").value;
+		var gasInput = document.getElementById("gas").value;
+		var oilInput = document.getElementById("oil").value;
+		var carInput = document.getElementById("car").value;
+		var flights4LessInput = document.getElementById("flights-4-less").value;
+		var flights4MoreInput = document.getElementById("flights-4-more").value;
+		
+		// set variables for calculating each component score
+		var electricScore = "";
+		var gasScore = "";
+		var oilScore = "";
+		var carScore = "";
+		var flights4LessScore = "";
+		var flights4MoreScore = "";
+		var newspaperScore = "";
+		var alumTinScore = "";
+
+		var totalScore = "";
+		var scorecomment="";
+		var wasteComment="";
+		var energyComment="";
+		var travelComment="";
+
+		if (document.getElementById("optionsRadio1").checked) {
+			newspaperScore = 0;
+		} else {
+			newspaperScore = 184;
+		}
+		// console.log("Newspaper score is: " + newspaperScore);
+
+		if (document.getElementById("optionsRadio3").checked) {
+			alumTinScore = 0;
+		} else {
+			alumTinScore = 166;
+		}
+		
+		
+		// console.log("Aluminum and tin score is: " + alumTinScore);
+
+		if (electricInput === 0 || electricInput === "undefined") {
+			electricScore = 0;
+		} else {
+			electricScore = electricInput * 105;
+		}
+		// console.log("Electric score is: " + electricScore);
+
+		if (gasInput === 0 || gasInput === "undefined") {
+			gasScore = 0;
+		} else {
+			gasScore = gasInput * 105;
+		}
+		// console.log("Gas score is: " + gasScore);
+
+		if (oilInput === 0 || oilInput === "undefined") {
+			oilScore = 0;
+		} else {
+			oilScore = oilInput * 113;
+		}
+		// console.log("Oil score is: " + oilScore);
+
+		if (carInput === 0 || carInput === "undefined") {
+			carScore = 0;
+		} else {
+			carScore = carInput * 0.79;
+		}
+		// console.log("Car score is: " + carScore);
+
+		if (flights4LessInput === 0 || flights4LessInput === "undefined") {
+			flights4LessScore = 0;
+		} else {
+			flights4LessScore = flights4LessInput * 1100;
+		}
+		// console.log("Flights taken 4 hours or less score is: " + flights4LessScore);
+
+		if (flights4MoreInput === 0 || flights4MoreInput === "undefined") {
+			flights4MoreScore = 0;
+		} else {
+			flights4MoreScore = flights4MoreInput * 4400;
+		}
+		// console.log("Flights taken 4 hours or more score is: " + flights4MoreScore);
+
+		// calculate scores for each category
+		var energyScore = electricScore + gasScore + oilScore;
+		var travelScore = carScore	+ flights4LessScore + flights4MoreScore;
+		var wasteScore = newspaperScore + alumTinScore;
+
+		// calculate total score and round to nearest whole integer
+		totalScore = Math.round(energyScore + travelScore + wasteScore);
+		
+		
+		// display results
+		if (totalScore <= 6000)
+			{scorecomment="Excellent";
+			$('#excellent').html(totalScore + '<i class="material-icons">&#xE91D;</i>');
+			
+				}
+		else if ((totalScore > 6000) && (totalScore < 16000))
+			{scorecomment="Good";
+			$('#good').html(totalScore + '<i class="material-icons">&#xE91D;</i>');
+	
+			}
+		else if ((totalScore >= 16000) && (totalScore < 22000))
+			{scorecomment="Average";
+			$('#average').html(totalScore + '<i class="material-icons">&#xE91D;</i>');
+			}
+		else
+			{scorecomment="Bad";
+			$('#bad').html(totalScore + '<i class="material-icons">&#xE91D;</i>');}
+		
+		if (wasteScore > 300)
+			{wasteComment='<ul><li class="mdl-list__item">Try to Recycle/Reuse </li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE56C;</i>Go vegetarian for a week</span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE1A4;</i> Carry your own bottle</span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE16C;</i>Segregate Waste</span></li></ul>'}
+		else
+		{wasteComment='<ul><li class="mdl-list__item">Keep Recycling/Reusing </li>'}
+		
+		if ((travelScore > 6000 ) && (travelScore < 16000 ))
+			{travelComment='<ul><li class="mdl-list__item">Consider reducing your travel</span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE531;</i> Prefer car pooling</span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE195;</i> Avoid un necessary travel</span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE52F;</i> Cycle/Walk short distance</span></li></ul>'  }
+		else if (travelScore >= 16000 )
+			{travelComment='<ul><li class="mdl-list__item">You are travelling too much </span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE195;</i> Strictly avoid un necessary travel</span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE559;</i> Prefer electric vehicle</span></li></ul>' }
+		
+		else 
+			{travelComment='<ul><li class="mdl-list__item">Your travel plan seems to be good </li>'}
+		
+		if ((energyScore > 6000) && (energyScore < 16000))
+			{energyComment='<ul><li class="mdl-list__item">Please consume less energy </li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE912;</i> Use Energy Star certified appliances</span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE90F;</i> Turn off lights</span></li></ul>' }
+		else if (energyScore > 16000)
+			{energyComment='<ul><li class="mdl-list__item">You are consuming too much energy </span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE430;</i> Go Solar</span></li><li class="mdl-list__item"><span class="mdl-list__item-primary-content"><i class="material-icons mdl-list__item-icon">&#xE80E;</i> Save gas/oil</span></li></ul>' }
+		else
+			{energyComment ='<ul><li class="mdl-list__item"> Your enegry usage is under control </li>'}
+		
+		
+		var generalComment=wasteComment+"</br> " + travelComment + "</br> "+energyComment;
+		
+		var formattedScore = totalScore.toLocaleString("en");
+		formattedScore="Your score is :" + formattedScore +" </br> which is " +scorecomment;
+		// console.log(totalScore);
+
+		document.getElementById("score").innerHTML = formattedScore;
+		document.getElementById("wastescore").innerHTML = wasteComment;
+		document.getElementById("travelscore").innerHTML = travelComment;
+		document.getElementById("energyscore").innerHTML = energyComment;
+		
+			
+		alert(totalScore);
+		alert(scorecomment);
+		$("#results").show();
+
+		// refresh page when recalculate button clicked
+		//Graph 1
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var chart = new Chart(ctx, {
+		    // The type of chart we want to create
+		    type: 'doughnut',
+
+		    // The data for our dataset
+		    data: {
+		        labels: ["Energy", "Travel", "Waste"],
+		        datasets: [{
+		            label: "My First dataset",
+					
+		            backgroundColor: ['red','blue','green'],
+		            borderColor: 'rgb(255, 99, 132)',
+		            data: [energyScore, travelScore, wasteScore],
+					
+					
+		        }]
+		    },
+
+		    // Configuration options go here
+		    options: {}
+		});
+		//Graph 1 end
+		
+		//Graph 2
+		var ctx = document.getElementById('myChartbrief').getContext('2d');
+		var chart = new Chart(ctx, {
+		    // The type of chart we want to create
+		    type: 'polarArea',
+
+		    // The data for our dataset
+		    data: {
+		        labels: ["Electricity", "Gas", "Oil","Short flight","Long flight","Newspaper","Aluminiun"],
+		        datasets: [{
+		            label: "Distribution",
+		            backgroundColor: ['red','blue','green','yellow','orange','pink','grey'],
+		            borderColor: 'rgb(255, 99, 132)',
+		            data: [electricScore, gasScore, oilScore,flights4LessScore,flights4MoreScore,newspaperScore,alumTinScore],
+					
+					
+		        }]
+		    },
+
+		    // Configuration options go here
+		    options: {}
+		});
+		//Graph 2 end
+		
+	
+		
+	}	
+
+	</script>
+</body>
+
+</html>
