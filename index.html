@@ -9,166 +9,195 @@
     <title>Carbon footprint calculator</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
-    <style>
-	    .portfolio-header {
-  position: relative;
-  }
-
-.portfolio-header .mdl-layout__header-row {
-  padding: 0;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.mdl-layout__title {
-  font-size: 14px;
-  text-align: center;
-  font-weight: 300;
-}
-
-.is-compact .mdl-layout__title span {
-  display: none;
-}
-
-.portfolio-logo-row {
-  min-height: 200px;
-}
-
-.is-compact .portfolio-logo-row {
-  min-height: auto;
-}
-
-.portfolio-logo {
-  background: url(images/logo.png) 50% no-repeat;
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  margin: auto auto 10px;
-}
-
-.is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
-  margin-top: 7px;
-}
-
-.portfolio-navigation-row {
-  background-color: rgba(0, 0, 0, 0.08);
-  text-transform: uppercase;
-  height: 45px;
-}
-
-.portfolio-navigation-row  .mdl-navigation {
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
-}
-
-.portfolio-navigation-row .mdl-navigation__link {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 42px;
-}
-
-.portfolio-header .mdl-layout__drawer-button {
-    background-color: rgba(197, 197, 197, 0.44);
-}
-
-.portfolio-navigation-row .is-active {
-  position: relative;
-  font-weight: bold;
-}
-
-.portfolio-navigation-row .is-active:after {
-  content: "";
-  width: 70%;
-  height: 2px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(255,64,129);
-  left: 15%;
-}
-
-.portfolio-card .mdl-card__title {
-  padding-bottom: 0;
-}
-
-
-.portfolio-blog-card-compact .mdl-card__title {
-  padding-bottom: 0;
-}
-
-.portfolio-blog-card-bg > .mdl-card__actions {
-  height: 52px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-img.article-image {
-  width: 100%;
-  height: auto;
-}
-
-.portfolio-max-width {
-  max-width: 900px;
-  margin: auto;
-}
-
-.portfolio-copy {
-  max-width: 700px;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-left-padding{
-  padding-left: 0;
-}
-
-.no-bottom-padding {
-  padding-bottom: 0;
-}
-
-.padding-top {
-  padding: 10px 0 0;
-}
-
-.portfolio-share-btn {
-  position: relative;
-  float: right;
-  top: -4px;
-}
-
-.demo-card-event > .mdl-card__actions {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.portfolio-contact .mdl-textfield {
-  width: 100%;
-}
-
-.portfolio-contact form {
-  max-width: 550px;
-  margin: auto;
-}
-
-footer {
-  background-size: cover;
-}
-
 <style>
+	.label {
+	  display: block;
+	  position: absolute;
+	  top: -55px;
+	  width: 25px;
+	  height: 25px;
+	  border-radius: 0 50% 50% 50%;
+	  background-color: rgb(63, 81, 181);
+	  transform: rotate(-135deg);
+	  margin-top: 20px;
+	}
 
+	.label div {
+	  line-height: 25px; 
+	  color: #ffffff;
+	  font-size: 10px;
+	  font-weight: 300;
+	  letter-spacing: 1px;
+	  text-align: center;
+	  transform: rotate(135deg);
+	}
+
+	.rangers{
+	  margin-bottom: 35px; margin-left: 25px;
+	}
+
+	.label.zeroed {
+	  background-color: rgba(0, 0, 0, 0.3);
+	}
+	.portfolio-header {
+	  position: relative;
+	  }
+
+	.portfolio-header .mdl-layout__header-row {
+	  padding: 0;
+	  -webkit-justify-content: center;
+	      -ms-flex-pack: center;
+	          justify-content: center;
+	}
+
+	.mdl-layout__title {
+	  font-size: 14px;
+	  text-align: center;
+	  font-weight: 300;
+	}
+
+	.is-compact .mdl-layout__title span {
+	  display: none;
+	}
+
+	.portfolio-logo-row {
+	  min-height: 200px;
+	}
+
+	.is-compact .portfolio-logo-row {
+	  min-height: auto;
+	}
+
+	.portfolio-logo {
+	  background: url(images/logo.png) 50% no-repeat;
+	  background-size: cover;
+	  height: 150px;
+	  width: 150px;
+	  margin: auto auto 10px;
+	}
+
+	.is-compact .portfolio-logo {
+	  height: 50px;
+	  width: 50px;
+	  margin-top: 7px;
+	}
+
+	.portfolio-navigation-row {
+	  background-color: rgba(0, 0, 0, 0.08);
+	  text-transform: uppercase;
+	  height: 45px;
+	}
+
+	.portfolio-navigation-row  .mdl-navigation {
+	  text-align: center;
+	  max-width: 900px;
+	  width: 100%;
+	}
+
+	.portfolio-navigation-row .mdl-navigation__link {
+	  -webkit-flex: 1;
+	      -ms-flex: 1;
+	          flex: 1;
+	  line-height: 42px;
+	}
+
+	.portfolio-header .mdl-layout__drawer-button {
+	    background-color: rgba(197, 197, 197, 0.44);
+	}
+
+	.portfolio-navigation-row .is-active {
+	  position: relative;
+	  font-weight: bold;
+	}
+
+	.portfolio-navigation-row .is-active:after {
+	  content: "";
+	  width: 70%;
+	  height: 2px;
+	  display: block;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  background-color: rgb(255,64,129);
+	  left: 15%;
+	}
+
+	.portfolio-card .mdl-card__title {
+	  padding-bottom: 0;
+	}
+
+
+	.portfolio-blog-card-compact .mdl-card__title {
+	  padding-bottom: 0;
+	}
+
+	.portfolio-blog-card-bg > .mdl-card__actions {
+	  height: 52px;
+	  padding: 16px;
+	  background: rgba(0, 0, 0, 0.2);
+	}
+
+	img.article-image {
+	  width: 100%;
+	  height: auto;
+	}
+
+	.portfolio-max-width {
+	  max-width: 900px;
+	  margin: auto;
+	}
+
+	.portfolio-copy {
+	  max-width: 700px;
+	}
+
+	.no-padding {
+	  padding: 0;
+	}
+
+	.no-left-padding{
+	  padding-left: 0;
+	}
+
+	.no-bottom-padding {
+	  padding-bottom: 0;
+	}
+
+	.padding-top {
+	  padding: 10px 0 0;
+	}
+
+	.portfolio-share-btn {
+	  position: relative;
+	  float: right;
+	  top: -4px;
+	}
+
+	.demo-card-event > .mdl-card__actions {
+	    -webkit-align-items: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    box-sizing: border-box;
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	}
+
+	.portfolio-contact .mdl-textfield {
+	  width: 100%;
+	}
+
+	.portfolio-contact form {
+	  max-width: 550px;
+	  margin: auto;
+	}
+
+	footer {
+	  background-size: cover;
+	}
+
+	
+</style>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -178,8 +207,8 @@ footer {
         <main class="mdl-layout__content">
 			
             <!-- form -->
-            <div id="form" class="mdl-grid portfolio-max-width portfolio-contact">
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+           <!--  <div id="form" class="mdl-grid portfolio-max-width portfolio-contact">
+                <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__title">
                         <img style="width:20%" class="article-image" src=" http://www.ngopulse.org/sites/default/files/greenpeace.jpg" border="0" alt="">
                     </div>
@@ -271,11 +300,90 @@ footer {
                         
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- form -->
         
 		<!--  cards start -->
            <div id="results" class="mdl-grid portfolio-max-width">
+               <div id="form" class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-contact">
+                   <div class="mdl-card__title">
+                       <img style="width:30%" class="article-image" src=" http://www.ngopulse.org/sites/default/files/greenpeace.jpg" border="0" alt="">
+                   </div>
+                   
+                  
+                   <div class="mdl-card__supporting-text">
+                       <p>
+                           Carbon in the earth's atmosphere is leading to climate destabilization and we are reaching a tipping point that calls for urgent action!
+                       </p>
+                       <p>
+                           “You will die but the carbon will not; its career does not end with you. It will return to the soil, and there a plant may take it up again in time, sending it once more on a cycle of plant and animal life”. -Jacob Bronowski
+                       </p>
+			                           <form  action="#" class="">
+			                               
+			                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<div class="rangers">Monthly Electric bill in $</div>
+			                        <input class="mdl-slider mdl-js-slider" type="range" id="electric" min="0" max="1000" step="1">
+			                                   
+			                                   
+			                               </div>
+			                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<div class="rangers">Monthly Gas bill in $</div>
+									<input class="mdl-slider mdl-js-slider" type="range" id="gas" min="0" max="1000" step="1">			                                  
+			                               </div>
+			                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		   									<div class="rangers">Monthly Oil bill in $</div>
+		   									<input class="mdl-slider mdl-js-slider" type="range" id="oil" min="0" max="1000" step="1">
+			                               </div>
+			                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
+		   									<div class="rangers">Annual miles driven on your car</div>
+		   									<input class="mdl-slider mdl-js-slider" type="range" id="car" min="0" max="1000" step="1">
+			                               </div>
+										   
+			                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+   		   							<div class="rangers">Number of flights taken in the past year (4 hours or less)</div>
+   		   							<input class="mdl-slider mdl-js-slider" type="range" id="flights-4-less" min="0" max="1000" step="1">
+									</div>
+									
+			                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	    		   					<div class="rangers">Number of flights taken in the past year (4 hours or less)</div>
+	    		   					<input class="mdl-slider mdl-js-slider" type="range" id="flights-4-more" min="0" max="1000" step="1">
+			                        </div>
+						
+			   							<fieldset>
+			   							<legend><b>Do you recycle newspaper?</b></legend>
+			   							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadio1">
+			   	 <input checked class="mdl-radio__button" id="optionsRadio1" name="newspaperOptionsRadios" type="radio" value="on">
+			   							  <span class="mdl-radio__label">Yes</span>
+			   							</label>
+			   							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadio2">
+			   							<input class="mdl-radio__button" id="optionsRadio2" name="newspaperOptionsRadios" type="radio" value="off">
+			   							  <span class="mdl-radio__label">No</span>
+			   							</label>
+			   						</fieldset>
+					
+					
+			   							<fieldset>
+			   								<legend><b>Do you recycle aluminum and tin?</b></legend>
+			   							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadio3">
+			   							  <input checked class="mdl-radio__button" id="optionsRadio3" name="alumtinOptionsRadios" type="radio"
+			   							   value="on">
+			   							  <span class="mdl-radio__label">Yes</span>
+			   							</label>
+			   							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadio4">
+			   							  <input class="mdl-radio__button" id="optionsRadio4" name="alumtinOptionsRadios" type="radio" value="off">
+			   							  <span class="mdl-radio__label">No</span>
+			   							</label>
+			   						</fieldset>
+									<!-- <p>
+			                             <button id="calculate-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Submit
+			                                   </button>
+							
+			                               </p> -->
+			   						</form>
+                       
+                   </div>
+               </div>
+			   
                <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
                    <div class="mdl-card__title">
                        <h2 class="mdl-card__title-text">Your Score</h2>
@@ -287,28 +395,10 @@ footer {
 				   <p id ="wastescore"> </p>
 				   <p id ="energyscore"> </p>
 				   <p id ="travelscore"> </p>
-                   <div class="mdl-card__actions mdl-card--border">
-                       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
-                   </div>
-               </div>
-			   
-               <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
-                   <div class="mdl-card__title">
-                       <h2 class="mdl-card__title-text">Overall contribution</h2>
-                   </div>
-                   <div class="mdl-card__supporting-text">
-					<canvas id="myChart"></canvas>
-                   </div>
-                   
-               </div>
-			   
-			   
-               <div class="mdl-cell mdl-card mdl-cell--6-col mdl-shadow--4dp portfolio-card">                
-                  <div class="mdl-card__title">
-                       <h2 class="mdl-card__title-text">Compare</h2>
-                   </div>
-                   <div class="mdl-card__supporting-text">
-					
+                   <div class="mdl-card__supporting-text mdl-card__actions mdl-card--border">
+                    <div class="mdl-card__title">
+                         <h2 class="mdl-card__title-text">Compare</h2>
+                     </div>
 					
 					<ul class="demo-list-two mdl-list">
 					  <li class="mdl-list__item mdl-list__item--two-line">
@@ -355,9 +445,22 @@ footer {
 					</ul>
                    </div>
                    <div class="mdl-card__actions mdl-card--border">
-                       <a id="campaign1" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="http://act.gp/2sF13fw">Take action</a>
                    </div>
                </div>
+			   
+               <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
+                   <div class="mdl-card__title">
+                       <h2 class="mdl-card__title-text">Overall contribution</h2>
+                   </div>
+                   <div class="mdl-card__supporting-text">
+					<canvas id="myChart"></canvas>
+                   </div>
+                   
+               </div>
+			   
+			   
+               
 			   
                <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp portfolio-card">
                    <div class="mdl-card__title">
@@ -382,9 +485,58 @@ footer {
 <script>
 	
 	
+	const demoElectric = document.getElementById('electric');
+	const demoGas = document.getElementById('gas');
+	const demoOil = document.getElementById('oil');
+	const demoCar = document.getElementById('car');
+	const demoFlightshort = document.getElementById('flights-4-less');
+	const demoFlightlong = document.getElementById('flights-4-more');
+	
+	
+	const labelMaker = function (e) {
+	  const input = e.target || e;
+	  const label = input.parentElement.querySelectorAll('.label')[0] || document.createElement('div');
+	  const labelInner = label.firstChild || document.createElement('div');
+	  const parentWidth = input.parentElement.offsetWidth;
+	  const inputWidth = input.offsetWidth ;
+	  const labelOffset = (parentWidth - inputWidth) / 2;
+	  const labelPosX = inputWidth * (input.value/1000) + ((1000 - input.value) * 14)/1000;
+
+	  label.classList.add('label');
+	  if (input.value == 0) {
+	    label.classList.add('zeroed');
+	  } else {
+	    label.classList.remove('zeroed');
+	  }
+	  labelInner.innerText = input.value;
+	  label.appendChild(labelInner);
+	  label.style.left = labelPosX + 'px';
+	  input.parentElement.appendChild(label);
+	}
+
+	demoElectric.addEventListener('input', labelMaker);
+	demoGas.addEventListener('input', labelMaker);
+	demoOil.addEventListener('input', labelMaker);
+	demoCar.addEventListener('input', labelMaker);
+	demoFlightshort.addEventListener('input', labelMaker);
+	demoFlightlong.addEventListener('input', labelMaker);
+	
+
+	window.onload = function() {
+		labelMaker(demoElectric);
+		labelMaker(demoGas);
+		labelMaker(demoOil);
+		labelMaker(demoCar);
+		labelMaker(demoFlightshort);
+		labelMaker(demoFlightlong);		
+	};
+	
+	// range marker end
+	
+	
 	$(document).ready(function() {
 		// hide results template and error alerts on initial page load
-		$("#results").hide();
+		//$("#results").hide();
 		// prevent ability to type negative numbers or spaces in input fields
 		$("[type='number']").bind("keydown", function(e) {
 			var code = e.keyCode || e.which;
@@ -395,10 +547,19 @@ footer {
 		});	
 	});
 	
-	$("#calculate-btn").on("click", function() {
+	//$("#calculate-btn").on("click", function() {
+	//	calculateAndDisplayScore();
+		
+	//});
+	
+	$("input").change(function(){
 		calculateAndDisplayScore();
+		$('#mychart').html('');
+		$('#myChartbrief').html('');
 		
 	});
+	
+	
 	
 	$("#recalculate-btn").on("click", function() {
 		location.reload();
@@ -413,7 +574,7 @@ footer {
 	var calculateAndDisplayScore = function() {
 		//window.scrollTo(0, 400);
 		// hide form template if all inputs are completed
-		$("#form").hide();
+		//$("#form").hide();
 
 		// get input values
 		var electricInput = document.getElementById("electric").value;
@@ -505,7 +666,15 @@ footer {
 		// calculate total score and round to nearest whole integer
 		totalScore = Math.round(energyScore + travelScore + wasteScore);
 		
-		
+		$('#excellent').html('');
+		$('#good').html('');
+		$('#average').html('');
+		$('#bad').html('');
+		$('#energyscore').html('');
+		$('#score').html('');
+		$('#wastescore').html('');
+		$('#energyscore').html('');
+		$('#travelscore').html('');
 		// display results
 		if (totalScore <= 6000)
 			{scorecomment="Excellent";
@@ -558,8 +727,8 @@ footer {
 		document.getElementById("energyscore").innerHTML = energyComment;
 		
 			
-		alert(totalScore);
-		alert(scorecomment);
+		//alert(totalScore);
+		//alert(scorecomment);
 		$("#results").show();
 
 		// refresh page when recalculate button clicked
